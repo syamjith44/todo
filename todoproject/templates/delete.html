@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="row ">
+  <div class="d-flex justify-content-center p-5">
+      <div class="">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                  <form method="post">
+                      {% csrf_token %}
+                      <h5 class="card-title text-warning">Task Completed</h5>
+                      <p class="card-text text-warning">Have you completed the task</p>
+                      <button type="submit" class="btn btn-success">Yes</button>
+                      <a href="{% url 'toDoList' %}" class="btn btn-warning">No</a>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="row ">
+  <div class="d-flex justify-content-center p-5">
+      <div class="">
+          <div class="card " style="width: 18rem;">
+              <div class="card-body">
+              <h4 class="card-title text-dark">Update Task</h4>
+                  <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label class="label label_warning" for="description">Description</label>
+                            <textarea class="form-control" id="description" name="description"
+                                      aria-placeholder="Update Description" rows="3">
+
+                            </textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="button"> </label>
+                            <a href="{% url 'toDoList' %}"><button class="btn btn-warning" id="button" type="submit">Update</button></a>
+                        </div>
+
+                    </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token%}
+
+</form>
